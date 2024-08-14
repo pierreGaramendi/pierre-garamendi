@@ -1,0 +1,9 @@
+@import "../../styles/global-mixins";
+
+.movie-item-cover {
+  @include movie-item-cover;
+}
+
+.movies-grid {
+  @include movies-grid;
+}

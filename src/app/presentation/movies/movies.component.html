@@ -1,0 +1,9 @@
+<section class="px-5">
+    <div class="fw-bold fs-2 me-3 text-center p-3">Películas</div>
+    <app-genre [items]="genresSignal" (onFilter)="beginFilter($event)"></app-genre>
+    <div class="movies-grid pt-4">
+        @for (item of filteredItemsSignal(); track item) {
+        <img class="movie-item-cover" [src]="item.cover" alt="movie-cover">
+        }
+    </div>
+</section>

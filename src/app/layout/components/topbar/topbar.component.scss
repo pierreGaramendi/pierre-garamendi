@@ -1,0 +1,26 @@
+.header {
+  border-bottom: solid grey 0.5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 60px;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 60px;
+}
+
+.header-right-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,18 @@
+@import "../../styles/global-mixins";
+@import "../../styles/abstracts/colors";
+
+.movie-item-cover {
+  @include movie-item-cover;
+}
+
+.movies-grid {
+  @include movies-grid;
+}
+
+.title {
+  color: $gray-700;
+}
+
+.subtitle {
+  color: $gray-600;
+}

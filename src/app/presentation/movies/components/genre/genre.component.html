@@ -1,0 +1,10 @@
+<div class="genre-container">
+    <button type="button" class="btn btn-primary me-2 item" (click)="selectGenre('')">
+        Principales
+    </button>
+    @for (item of items(); track item) {
+    <button type="button" class="btn btn-primary me-2 no-wrap-text" (click)="selectGenre(item)">
+        {{ item }}
+    </button>
+    }
+</div>

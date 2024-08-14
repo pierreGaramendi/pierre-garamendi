@@ -1,0 +1,14 @@
+.genre-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 10px;
+  width: 100%;
+  max-height: 45px;
+  scrollbar-width: thin;
+}
+
+.no-wrap-text {
+  white-space: nowrap;
+}

@@ -1,0 +1,16 @@
+<mat-form-field class="w-100">
+    <input matInput placeholder="Buscar peliculas por Nombre o Descripcion..." [formControl]="searchControl">
+</mat-form-field>
+
+<section class="px-5">
+    <div class="fw-bold fs-2 me-3">Buscar</div>
+    <div class="movies-grid pt-4">
+        @for (item of filteredItems$ |async; track item) {
+        <div>
+            <img class="movie-item-cover" [src]="item['cover']" alt="movie-cover">
+            <div class="fw-bold fs-6 title">{{item['title']}}</div>
+            <div class="subtitle">{{item['genre']}}</div>
+        </div>
+        }
+    </div>
+</section>

@@ -1,0 +1,30 @@
+@mixin movies-grid($min-column-width: 250px, $max-columns: 5) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-column-width, 1fr));
+  gap: 1rem;
+
+  @media (min-width: calc(#{$min-column-width} * $max-columns)) {
+    grid-template-columns: repeat($max-columns, 1fr);
+  }
+}
+
+@mixin movie-item-cover {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  &:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 4px;
+  }
+}
