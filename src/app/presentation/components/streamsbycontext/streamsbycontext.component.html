@@ -9,7 +9,7 @@
         </button>
         <div class="streams-carousel d-flex overflow-hidden" #carousel>
             @for (stream of moviesSignal(); track stream) {
-            <div class="card bg-dark text-white mx-2">
+            <div class="card text-white mx-2 border-0">
                 <img [src]="stream.cover" class="d-block movie-item-cover" alt="Stream image">
             </div>
             }
