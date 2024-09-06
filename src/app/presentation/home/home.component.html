@@ -1,0 +1,42 @@
+<div class="container-fluid px-4">
+    <div class="row my-5">
+        <div class="col-md-8">
+            <h1 class="display-4 fw-bold">PLAY, COMPETE, FOLLOW POPULAR MOVIES</h1>
+            <p class="lead">The best streamers gather here to have a good time, be among us, join us!</p>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-dark text-white">
+                <img src="assets/stream-thumbnail.png" class="card-img-top" alt="Stream Thumbnail">
+                <div class="card-body">
+                    <h5 class="card-title">Broadcast starts in</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="h2">04:03</span>
+                        <button class="btn btn-sm btn-secondary">Coming Soon</button>
+                    </div>
+                    <p class="card-text mt-2">Battle for the castle with Franck Jourdan and Eva703</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @defer (on viewport) {
+    <app-streamsbycontext />
+    } @placeholder {
+    <div>Loading videos...</div>
+    }
+
+
+
+    <div class="row my-5">
+        <div class="col-12 d-flex justify-content-between align-items-center">
+            <h2>Top authors</h2>
+            <button class="btn btn-outline-light">View all</button>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        </div>
+    </div>
+
+
+</div>
