@@ -10,51 +10,11 @@ import { IMovie, IResponse } from '../../../core/domain/movies.mode';
   styleUrl: './streamsbycontext.component.scss',
 })
 export class StreamsbycontextComponent {
+  
   @ViewChild('carousel', { static: false }) carousel!: ElementRef;
-  streams = [
-    {
-      title: 'Serious fight night with Rick',
-      author: 'Mr. Rick Tomson',
-      image: 'assets/stream1.png',
-    },
-    {
-      title: 'Pumpkin Party in Orizona',
-      author: 'Milena Foster',
-      image: 'assets/stream2.png',
-    },
-    {
-      title: 'Serious fight night with Rick',
-      author: 'Mr. Rick Tomson',
-      image: 'assets/stream3.png',
-    },
-    {
-      title: 'Serious fight night with Rick',
-      author: 'Bob Game450',
-      image: 'assets/stream4.png',
-    },
-    {
-      title: 'Serious fight night with Rick',
-      author: 'Bob Game450',
-      image: 'assets/stream4.png',
-    },
-    {
-      title: 'Serious fight night with Rick',
-      author: 'Bob Game450',
-      image: 'assets/stream4.png',
-    },
-    {
-      title: 'Serious fight night with Rick',
-      author: 'Bob Game450',
-      image: 'assets/stream4.png',
-    },
-    {
-      title: 'Serious fight night with Rick',
-      author: 'Bob Game450',
-      image: 'assets/stream4.png',
-    },
-  ];
   constructor(private getMoviesUseCase: GetMoviesUseCase) {}
   moviesSignal = signal<IMovie[]>([]);
+
   ngOnInit(): void {
     this.getMoviesUseCase.execute().subscribe({
       next: (response: IResponse) => {
@@ -65,6 +25,7 @@ export class StreamsbycontextComponent {
       },
     });
   }
+
   scrollLeft() {
     this.carousel.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
   }
