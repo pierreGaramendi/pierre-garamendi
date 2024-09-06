@@ -1,6 +1,7 @@
 import { Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { GetMoviesUseCase } from '../../../core/usecases/get-movies.usecase';
 import { IMovie, IResponse } from '../../../core/domain/movies.mode';
+
 @Component({
   selector: 'app-streamsbycontext',
   standalone: true,
@@ -53,8 +54,8 @@ export class StreamsbycontextComponent {
       image: 'assets/stream4.png',
     },
   ];
-  constructor(private getMoviesUseCase: GetMoviesUseCase) {}
   moviesSignal = signal<IMovie[]>([]);
+  constructor(private getMoviesUseCase: GetMoviesUseCase) {}
   ngOnInit(): void {
     this.getMoviesUseCase.execute().subscribe({
       next: (response: IResponse) => {
@@ -65,6 +66,7 @@ export class StreamsbycontextComponent {
       },
     });
   }
+
   scrollLeft() {
     this.carousel.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
   }

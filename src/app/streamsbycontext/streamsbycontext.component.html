@@ -10,7 +10,11 @@
         <div class="streams-carousel d-flex overflow-hidden" #carousel>
             @for (stream of moviesSignal(); track stream) {
             <div class="card bg-dark text-white mx-2">
-                <img [src]="stream.cover" class="d-block movie-item-cover" alt="Stream image">
+                <img [src]="stream.cover" class="d-block movie-item-cover" alt="Stream image ">
+<!--                 <div class="card-body text-center">
+                    <h5 class="card-title">{{ stream.title }}</h5>
+                    <p class="card-text">{{ stream.genre }}</p>
+                </div> -->
             </div>
             }
         </div>
