@@ -21,24 +21,40 @@
     </div>
 
 
-    @defer (on viewport) {
-    <app-streamsbycontext />
-    } @placeholder {
+    @defer (on idle) {
+    <app-streamsbycontext title="Movies of the Day" />
+    } @loading {
     <div>Loading videos...</div>
     }
 
 
+    @defer (on idle) {
+    <app-streamsbycontext title="Top authors" />
+    } @loading {
+    <div>Loading videos...</div>
+    }
 
 
-    <div class="row my-5">
-        <div class="col-12 d-flex justify-content-between align-items-center">
-            <h2>Top authors</h2>
-            <button class="btn btn-outline-light">View all</button>
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+    @defer (on idle) {
+    <app-streamsbycontext title="Recién agregados" />
+    } @loading {
+    <div>Loading videos...</div>
+    }
 
-        </div>
-    </div>
+    @defer (on idle) {
+    <app-streamsbycontext title="Continuar viendo" />
+    }
+    @loading {
+    <div>Loading videos...</div>
+    }
+
+
+    @defer (on idle) {
+    <app-streamsbycontext title="Recomendaciones para ti" />
+    } @loading {
+    <div>Loading videos...</div>
+    }
+
 
 
 </div>

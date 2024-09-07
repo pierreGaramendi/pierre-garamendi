@@ -3,7 +3,7 @@ import {
   ElementRef,
   signal,
   ViewChild,
-  computed,
+  computed,input
 } from '@angular/core';
 import { GetMoviesUseCase } from '../../../core/usecases/get-movies.usecase';
 import { IMovie, IResponse } from '../../../core/domain/movies.mode';
@@ -21,7 +21,7 @@ import { CarouselStreamsSkeletonComponent } from '../carousel-streams-skeleton/c
 export class StreamsbycontextComponent {
   @ViewChild('carousel', { static: false }) carousel!: ElementRef;
   constructor(private getMoviesUseCase: GetMoviesUseCase) {}
-
+  title = input.required<string>(); 
   moviesSignal = signal<IMovie[]>([]);
   loadingSignal = signal<boolean>(true); // Signal para el estado de carga
 

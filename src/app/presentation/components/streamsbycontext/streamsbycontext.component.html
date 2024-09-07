@@ -1,11 +1,17 @@
-<app-custome-carousel>
-    @if(isLoading()){
-    <app-carousel-streams-skeleton></app-carousel-streams-skeleton>
-    } @else {
-    @for (stream of moviesSignal(); track stream) {
-    <div class="card text-white mx-2 border-0">
-        <img [src]="stream.cover" class="d-block movie-item-cover" alt="Stream image">
+<div class="streams-carousel-container my-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <h2>{{title()}}</h2>
+        <button class="btn btn-dark">Ver todo</button>
     </div>
-    }
-    }
-</app-custome-carousel>
+    <app-custome-carousel>
+        @if(isLoading()){
+            <app-carousel-streams-skeleton></app-carousel-streams-skeleton>
+        } @else {
+            @for (stream of moviesSignal(); track stream) {
+            <div class="card text-white mx-2 border-0">
+                <img [src]="stream.cover" class="d-block movie-item-cover" alt="Stream image">
+            </div>
+            }
+        }
+    </app-custome-carousel>
+</div>
