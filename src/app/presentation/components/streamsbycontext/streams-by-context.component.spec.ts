@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StreamsbycontextComponent } from './streamsbycontext.component';
+import { StreamsbycontextComponent } from './streams-by-context.component';
 
 describe('StreamsbycontextComponent', () => {
   let component: StreamsbycontextComponent;

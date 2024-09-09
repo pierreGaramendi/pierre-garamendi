@@ -1,7 +1,8 @@
 <div class="container-fluid px-4">
     <div class="row my-5">
         <div class="col-md-8">
-            <h1 class="display-4 fw-bold">PLAY, COMPETE, FOLLOW POPULAR MOVIES</h1>
+            <h1 class="display-4 fw-bold">PLAY, 
+                EXPERIENCE, FOLLOW POPULAR MOVIES</h1>
             <p class="lead">The best streamers gather here to have a good time, be among us, join us!</p>
         </div>
         <div class="col-md-4">
@@ -19,42 +20,9 @@
             </div>
         </div>
     </div>
-
-
-    @defer (on idle) {
     <app-streamsbycontext title="Movies of the Day" />
-    } @loading {
-    <div>Loading videos...</div>
-    }
-
-
-    @defer (on idle) {
     <app-streamsbycontext title="Top authors" />
-    } @loading {
-    <div>Loading videos...</div>
-    }
-
-
-    @defer (on idle) {
     <app-streamsbycontext title="Recién agregados" />
-    } @loading {
-    <div>Loading videos...</div>
-    }
-
-    @defer (on idle) {
     <app-streamsbycontext title="Continuar viendo" />
-    }
-    @loading {
-    <div>Loading videos...</div>
-    }
-
-
-    @defer (on idle) {
     <app-streamsbycontext title="Recomendaciones para ti" />
-    } @loading {
-    <div>Loading videos...</div>
-    }
-
-
-
 </div>
