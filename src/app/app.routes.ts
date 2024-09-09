@@ -4,7 +4,9 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./layout/layout.component').then((m) => m.LayoutComponent),
+      import('./presentation/layout/layout.component').then(
+        (m) => m.LayoutComponent
+      ),
     children: [
       {
         path: 'home',
