@@ -29,7 +29,7 @@ export const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'busqueda',
+        redirectTo: 'home',
       },
     ],
   },
